@@ -1,0 +1,186 @@
+/* .home {
+    margin-bottom: 60px;
+} */
+
+nav {
+    /* position: absolute;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    background: transparent; */
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    z-index: 3000;
+    position: fixed;
+    width: 100vw;
+    overflow: hidden;
+    margin-bottom: 2px;
+    box-shadow: 2px 3px 5px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* nav.fixed-header {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100vw;
+} */
+
+nav .logo {
+    position: relative;
+    top: 7px;
+}
+
+nav .logo img {
+    width: 70px;
+    height: 70px;
+}
+
+nav div.logo span {
+    position: relative;
+    top: -30px;
+    padding-left: 2vmax;
+    font-size: 4vmax;
+    font-style: italic;
+    color: var(--logo-color);
+    /* font-family: Arial, Helvetica, sans-serif; */
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    /* -webkit-tap-highlight-color: transparent; */
+}
+
+nav ul.desktopNav {
+    display: none;
+}
+
+nav ul.mobileNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    /* height: 60px; */
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: white;
+    box-shadow: 2px -3px 5px 1px rgba(0, 0, 0, 0.05);
+    z-index: 3000;
+}
+
+nav ul.mobileNav:hover a {
+    /* filter: blur(1px); */
+    filter: opacity(0.5);
+}
+
+nav ul.mobileNav a:hover {
+    /* filter: blur(0px); */
+    filter: opacity(1);
+}
+
+nav ul.mobileNav li a {
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul.mobileNav li a i {
+    font-size: 30px;
+}
+
+nav ul.mobileNav li a span {
+    padding-top: 5px;
+    font-size: 15px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+}
+
+.navLink a {
+    transition: all 300ms ease;
+    color: var(--navLink-color);
+}
+
+.nav3rdSect i:first-child {
+    font-size: 30px;
+}
+
+.nav3rdSect i.fa-bell {
+    position: relative;
+    bottom: 3px;
+}
+
+.nav3rdSect i {
+    cursor: pointer;
+    font-size: 20px;
+    padding: 0px 10px;
+    color: var(--navLink-color);
+}
+
+/* iPhone4 and below settings */
+@media screen and (max-width: 320px) {
+    nav ul.mobileNav li a i {
+        font-size: 20px;
+    }
+
+    nav ul.mobileNav li a span {
+        font-size: 12px;
+    }
+}
+
+/* desktop and tablet settings */
+@media screen and (min-width: 900px) {
+    nav {
+        height: 85px;
+        display: flex;
+        /* justify-content: space-between; */
+        align-items: center;
+        padding: 0px 20px;
+    }
+
+    nav .logo img {
+        width: 100px;
+        height: 100px;
+    }
+
+    nav ul.mobileNav {
+        display: none;
+    }
+
+    nav ul.desktopNav {
+        /* display: flex; */
+        display: block;
+        flex: 1;
+        text-align: right;
+    }
+
+    nav ul.desktopNav li {
+        display: inline-block;
+        position: relative;
+        margin: 0 30px;
+        font-size: 17px;
+    }
+
+    nav ul.desktopNav li a::before {
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        height: 2px;
+        width: 0%;
+        content: '';
+        background: linear-gradient(to left, #ed1111 0%, #ee3059 100%);
+        transform: scale(-1);
+        transition: all 250ms ease;
+    }
+
+    nav ul.desktopNav li a:hover::before {
+        left: 0;
+        width: 100%;
+    }
+}

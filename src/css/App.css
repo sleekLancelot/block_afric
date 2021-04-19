@@ -1,0 +1,19 @@
+:root {
+    /* --logo-color: rgb(192, 44, 68); */
+    --logo-color: rgba(173, 22, 77, 0.9);
+    /* --navLink-color: rgb(241, 50, 50); */
+    --navLink-color: #be0025;
+    /* --blue: rgb(105, 105, 252); */
+    --blue: #0a6ab6;
+    --wallpaper: rgb(219, 216, 216);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--wallpaper);
+}
