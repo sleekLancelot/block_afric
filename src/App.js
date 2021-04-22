@@ -12,7 +12,7 @@ function App() {
         <Navbar />
         <Switch>
           <Route exact path='/' children={<Home />} />
-          <Route path='/(activity|wallet|market|earn)/' component={Dummy} />
+          <Route path='/(activity|wallet|market|earn|profile|notification)/' component={Dummy} />
         </Switch>
       </Router>
     </div>

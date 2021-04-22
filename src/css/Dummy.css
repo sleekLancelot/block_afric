@@ -2,5 +2,10 @@ div.dummy {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.dummy p {
+    position: relative;
+    top: 100px;
 }

@@ -2,15 +2,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 import '../../css/Navbar.css'
-import logo from '../assets/LogoMakr-5PTESv.png'
 
 const Navbar = () => {
     return (
         <nav className='navbar'>
             <div className="logo">
                 <Link to='/'>
-                    <img src={logo} alt="logo" />
-                    <span>ribbon</span>
+                    <span>LOGO</span>
                 </Link>
             </div>
 
@@ -68,8 +66,12 @@ const Navbar = () => {
             </ul>
 
             <div className="nav3rdSect">
-                <i className="fas fa-user-circle"></i>
-                <i className="fas fa-bell"></i>
+                <Link to='profile'>
+                    <i className="fas fa-user-circle"></i>
+                </Link>
+                <Link to='notification'>
+                    <i className="fas fa-bell"></i>
+                </Link>
             </div>
         </nav>
     )

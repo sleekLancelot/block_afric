@@ -12,121 +12,17 @@ div.homeSect1 {
 div.sides {
     width: 90vw;
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 45vw));
     height: 25vh;
     margin: 10px auto;
-    animation: bounce 0.7s ease 0.5s 1 both;
-    overflow: hidden;
-}
-
-@keyframes bounce {
-    0% {
-        gap: 100vw;
-    }
-
-    12% {
-        gap: 90vw;
-    }
-
-    24% {
-        gap: 57vw;
-    }
-
-    36% {
-        gap: 3vw;
-    }
-
-    54% {
-        gap: 25vw;
-    }
-
-    74% {
-        gap: 2.5vw;
-    }
-
-    82% {
-        gap: 6.25vw;
-    }
-
-    92% {
-        gap: 0.7vw;
-    }
-
-    96% {
-        gap: 1.5vw;
-    }
-
-    100% {
-        gap: 0vw;
-    }
-}
-
-div.side {
+    border-radius: 15px;
+    background: rgb(236, 235, 235);
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    font-size: 2.4vmin;
-    color: white;
-    background: var(--logo-color);
-}
-
-div.side.bal {
-    border-radius: 20px 0 0 20px;
-    /* background: linear-gradient(to left, var(--navLink-color) 0%, var(--logo-color) 100%); */
-}
-
-div.side.eqv {
-    border-radius: 0 20px 20px 0px;
-    /* background: linear-gradient(to right, var(--navLink-color) 0%, var(--logo-color) 100%); */
-}
-
-div.side h2 {
-    width: 6vw;
-    height: 4vw;
-    text-align: center;
-    padding-top: 5px;
-    background: white;
-    border-radius: 50%;
-}
-
-div.side.bal h2 {
-    color: var(--navLink-color);
-}
-
-div.side.eqv h2 {
-    color: var(--blue);
-}
-
-div.arrow {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    width: 5vw;
-    height: 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    border-radius: 50%;
-    border-width: 8px;
-    font-size: 4vw;
-    margin: auto;
-    border-width: 8px;
-    border-style: solid;
-    border-color: #e90f5b #b51212 #b51212 #e90f5b;
-    transform: rotate(-45deg);
-}
-
-div.arrow i {
-    font-size: 27px;
-    transform: rotate(45deg);
-    /* padding-bottom: 15px;
-    padding-right: 35px; */
-    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 3px 5px 3px rgb(236, 235, 235), -2px -3px 5px 3px rgb(236, 235, 235);
 }
 
 div.homeSect2,
@@ -154,17 +50,17 @@ div.currency {
     align-items: center;
 }
 
-div.currency select,
+div.currency span,
 div.currency input {
     border: 1px solid rgba(131, 127, 127, 0.56);
 }
 
-div.currency select {
+div.currency span {
     height: 40px;
-    padding-left: 5px;
-    /* margin-left: 70px; */
+    padding: 10px;
+    font-weight: 600;
     border-right: 0;
-    background: rgba(131, 127, 127, 0.56);
+    background: rgb(214, 211, 211);
 }
 
 div.currency input {
@@ -172,12 +68,15 @@ div.currency input {
     width: 65vw;
     border-radius: 0 7px 7px 0;
     padding-left: 5px;
-    background: rgba(219, 216, 216, 0.7);
+    /* background: rgba(219, 216, 216, 0.7); */
+    background: rgb(236, 235, 235);
+    outline: none;
 }
 
 div.currency input::placeholder {
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    filter: opacity(0.6);
 }
 
 .btnBox {
@@ -202,6 +101,7 @@ div.currency input::placeholder {
     transition: transform 500ms ease;
     box-shadow: 0 4px 15px 0 var(--blue);
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    outline: none;
 }
 
 .btn::before {
@@ -242,15 +142,26 @@ div.activities {
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background: rgb(236, 235, 235);
+    box-shadow: 2px 3px 5px 3px rgb(236, 235, 235), -2px -3px 5px 3px rgb(236, 235, 235);
+    margin-bottom: 5px;
 }
 
 div.act {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
-    background: white;
     margin-bottom: 1px;
+    font-weight: 635;
+}
+
+div.act span:nth-child(2) {
+    position: relative;
+    left: -25px;
 }
 
 /* mobile settings */
@@ -283,15 +194,12 @@ div.act {
         align-items: center;
     }
 
-    div.arrow {
-        width: 17vw;
-        height: 17vw;
-    }
-
-    div.currency select {
+    div.currency span {
         height: 50px;
         width: 20vw;
         margin-left: 7px;
+        padding-left: 3px;
+        padding-top: 13px;
     }
 
     div.currency input {

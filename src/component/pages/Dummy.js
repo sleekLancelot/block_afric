@@ -5,9 +5,14 @@ import { useLocation } from 'react-router-dom'
 
 const Dummy = () => {
     const location = useLocation()
+
+    let menuName = location.pathname.slice(1, location.pathname.length)
+
     return (
         <div className='dummy'>
-            {location.pathname}
+            <p>
+                {`${menuName} page`}
+            </p>
         </div>
     )
 }

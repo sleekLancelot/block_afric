@@ -2,28 +2,14 @@ import React from 'react'
 
 import '../../css/Home.css'
 
-import hiv from '../assets/LogoMakr-7pHYX8.png'
-import xray from '../assets/Radiology.png'
-import bp from '../assets/bpcheck.jpg'
-
 const Home = () => {
     return (
         <div className='home'>
             <div className="homeSect1">
                 <div className="sides">
-                    <div className="side bal">
-                        <h2>AFYA</h2>
-                        <p>143.00</p>
-                        <span>Balance</span>
-                    </div>
-                    <div className="arrow">
-                        <i className="fas fa-equals"></i>
-                    </div>
-                    <div className="side eqv">
-                        <h2>ZAR</h2>
-                        <p>R21.00</p>
-                        <span>Equivalent</span>
-                    </div>
+                    <h2>WALLET BALLANCE</h2>
+                    <h2>TOKEN BALANCE</h2>
+                    <h2>NAIRA BALANCE</h2>
                 </div>
             </div>
 
@@ -31,10 +17,7 @@ const Home = () => {
                 <p>Select Currency:</p>
                 <div className="currencyBox">
                     <div className="currency">
-                        <select>
-                            <option>AFYA</option>
-                            <option>ZAR</option>
-                        </select>
+                        <span>TOKEN</span>
                         <input type="text" placeholder='0.00000001' />
                     </div>
 
@@ -49,19 +32,24 @@ const Home = () => {
                 <p>Recent Activity</p>
                 <div className="activities">
                     <div className="act">
-                        <img src={hiv} alt="HIV test" width='45px' height='45px' />
-                        <span>HIV Blood Draw Test</span>
-                        <span>A100</span>
+                        <h5>DATE</h5>
+                        <h5>DESCRIPTION</h5>
+                        <h5>AMOUNT</h5>
                     </div>
                     <div className="act">
-                        <img src={xray} alt="x-ray" width='45px' height='45px' />
-                        <span>TB Radiology Xray</span>
-                        <span>A30</span>
+                        <span>1/1/21</span>
+                        <span>Sent</span>
+                        <span>₦100</span>
                     </div>
                     <div className="act">
-                        <img src={bp} alt="BP check" width='45px' height='45px' />
-                        <span>Blood pressure check</span>
-                        <span>A10</span>
+                        <span>2/2/21</span>
+                        <span>Received</span>
+                        <span>₦200</span>
+                    </div>
+                    <div className="act">
+                        <span>3/3/21</span>
+                        <span>Sent</span>
+                        <span>₦300</span>
                     </div>
                 </div>
             </div>
